@@ -1,0 +1,60 @@
+package TestCaseExample1;
+
+
+public class Module1_unit4_Curry
+{ 
+	 public static void main(String[] args) 
+	 {
+		 //create an instance or test case
+		 
+		 Module1_unit4_Curry testcase = new Module1_unit4_Curry();
+		 
+		 // make up your test data
+		 
+		 int[] myTestcaseNumbers = { 15,3,22,14,60};
+		 int timestoLook = 3;
+		 
+		 // call the module to calculate the formula and print out a result.
+		 //the variable result is where you result will go into.
+		 //the module has variables integer arrayOfInts and int n to use.
+		 //myTestcaseNumbers will be calculated in the array with the first slot and a comma in the function.
+		 //timestoLook will be used in the function as the number of times the iterate.
+		 
+		 int result = testcase.Example1(myTestcaseNumbers, timestoLook);
+		 
+		 //format a print statement to show the result;
+		 
+		 System.out.println("The minimum value found is:" + result);
+		 
+	 }
+	        
+	// given an array of integers, and a number of times to look, return the minimum value
+
+	public int Example1 (int [] arrayOfInts, int n)
+	{
+	    int currmin = 100;
+	    
+	   
+	    for (int i = 0; i < n && i < arrayOfInts.length; i++)
+
+	  {
+	      if (arrayOfInts[i] < currmin )
+	          currmin= arrayOfInts[i];
+	  }
+	  return currmin;
+	  // this returns an error because the condition creates an infinite look.
+	  // i cannot be bigger than the array size.
+	  // we have to add this next line!
+	  //for (int i = 0; i < n && i < arrayOfInts.length; i++) {
+
+	  
+	}
+	
+	
+	
+
+
+}
+
+
+
